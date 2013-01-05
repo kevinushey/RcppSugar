@@ -25,3 +25,4 @@ Collate:
     'unique.R'
     'in.R'
     'pow.R'
+    'table.R'

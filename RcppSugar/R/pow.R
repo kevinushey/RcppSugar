@@ -32,7 +32,7 @@
 #' ## numeric vectors; however, it's much slower for small vectors.
 pow <- function(x, n) {
   
-  modes <- paste( mode(x), mode(n), sep="_" )
+  classes <- paste( mode(x), mode(n), sep="_" )
   
   switch( modes,
           numeric_numeric = .Call( "RcppSugar_pow_numeric_numeric", x, n, PACKAGE="RcppSugar" ),
