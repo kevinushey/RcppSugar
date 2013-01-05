@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{pow}.
 #' 
 #' @param x a vector of either numeric or integer type.
-#' @param y a single number of either numeric or integer type.
+#' @param n a single number of either numeric or integer type.
 #' @export
 #' @examples
 #' library( microbenchmark )
@@ -20,7 +20,7 @@
 #'   x^n
 #'   )
 #'   
-#' x <- sample( 1:100L, size=1E8, replace=TRUE )
+#' x <- sample( 1:100L, size=1E6, replace=TRUE )
 #' n <- 3L
 #' microbenchmark( times=2,
 #'   pow(x, n),
@@ -32,7 +32,7 @@
 #' ## numeric vectors; however, it's much slower for small vectors.
 pow <- function(x, n) {
   
-  classes <- paste( mode(x), mode(n), sep="_" )
+  modes <- paste( mode(x), mode(n), sep="_" )
   
   switch( modes,
           numeric_numeric = .Call( "RcppSugar_pow_numeric_numeric", x, n, PACKAGE="RcppSugar" ),

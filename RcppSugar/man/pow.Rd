@@ -7,7 +7,7 @@
 \arguments{
   \item{x}{a vector of either numeric or integer type.}
 
-  \item{y}{a single number of either numeric or integer
+  \item{n}{a single number of either numeric or integer
   type.}
 }
 \description{
@@ -29,7 +29,7 @@ microbenchmark( times=2,
   x^n
   )
 
-x <- sample( 1:100L, size=1E8, replace=TRUE )
+x <- sample( 1:100L, size=1E6, replace=TRUE )
 n <- 3L
 microbenchmark( times=2,
   pow(x, n),

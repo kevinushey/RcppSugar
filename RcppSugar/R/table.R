@@ -9,6 +9,7 @@
 #' is called instead.
 #' @export
 #' @examples
+#' library( microbenchmark )
 #' x <- rbinom(1E6, size=10, p=0.2)
 #' microbenchmark( times=5,
 #'   table(x),

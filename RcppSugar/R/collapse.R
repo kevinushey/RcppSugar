@@ -5,10 +5,10 @@
 #' @param x a vector coercible to character
 #' @export
 #' @examples
-#' require(microbenchmark)
+#' library(microbenchmark)
 #' x <- sample( LETTERS, size=1E5, replace=TRUE )
-#' microbenchmark( base::paste0(x), collapse(x), times=20 )
-#' stopifnot( all.equal( base::paste0(x), collapse(x) ) )
+#' microbenchmark( base::paste(x, collapse=""), collapse(x), times=20 )
+#' stopifnot( all.equal( base::paste(x, collapse=""), collapse(x) ) )
 collapse <- function(x) {
   
   .Call( "RcppSugar_collapse", as.character(x), PACKAGE="RcppSugar" )
