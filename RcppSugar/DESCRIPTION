@@ -1,0 +1,26 @@
+Package: RcppSugar
+Type: Package
+Title: An implementation of Rcpp 'sugar'.
+Version: 0.1.0
+Date: 2013-01-04
+Author: Kevin Ushey
+Maintainer: Kevin Ushey <kevinushey@gmail.com>
+Description: This package wraps and exports some of Rcpp's sugar functions directly to
+    the user. All functions included should be faster for the atomic
+    classes accepted; if the Rcpp sugar function is not implemented
+    for a particular class then we simply fall back to the base R
+    implementation. See the examples for some demonstrations.
+License: GPL (>=2)
+Depends:
+    Rcpp (>= 0.10.2)
+Suggests:
+    microbenchmark,
+    fastmatch
+LinkingTo: Rcpp
+Collate:
+    'match.R'
+    'package_details.R'
+    'collapse.R'
+    'abs.R'
+    'unique.R'
+    'in.R'

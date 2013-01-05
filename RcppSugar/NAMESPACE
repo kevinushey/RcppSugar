@@ -1,0 +1,6 @@
+export("%in%")
+export(abs)
+export(collapse)
+export(match)
+export(unique)
+useDynLib(RcppSugar)
