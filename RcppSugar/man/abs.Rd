@@ -20,5 +20,8 @@ microbenchmark( times=20,
   abs(y),
   base::abs(y)
   )
+
+stopifnot( all.equal( abs(x), base::abs(x) ) )
+stopifnot( all.equal( abs(y), base::abs(y) ) )
 }
 

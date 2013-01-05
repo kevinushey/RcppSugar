@@ -18,5 +18,7 @@ microbenchmark( times=20,
   unique(x),
   base::unique(x)
   )
+
+stopifnot( all.equal( sort(unique(x)), sort(base::unique(x)) ) )
 }
 

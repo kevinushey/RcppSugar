@@ -33,5 +33,7 @@ microbenchmark( times=20,
   x \%in\% y,
   base::"\%in\%"(x, y)
   )
+
+stopifnot( all.equal( x \%in\% y, base::"\%in\%"(x, y) ) )
 }
 

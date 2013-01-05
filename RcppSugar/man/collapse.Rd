@@ -15,5 +15,6 @@
 require(microbenchmark)
 x <- sample( LETTERS, size=1E5, replace=TRUE )
 microbenchmark( base::paste0(x), collapse(x), times=20 )
+stopifnot( all.equal( base::paste0(x), collapse(x) ) )
 }
 
