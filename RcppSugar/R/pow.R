@@ -32,7 +32,7 @@ pow <- function(x, n) {
   
   types <- paste( typeof(x), typeof(n), sep="_" )
   
-  switch( modes,
+  switch( types,
           double_double = .Call( "RcppSugar_pow_numeric_numeric", x, n, PACKAGE="RcppSugar" ),
           double_integer = .Call( "RcppSugar_pow_numeric_integer", x, n, PACKAGE="RcppSugar" ),
           integer_double = .Call( "RcppSugar_pow_integer_numeric", x, n, PACKAGE="RcppSugar" ),
