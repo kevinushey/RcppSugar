@@ -26,3 +26,6 @@ Collate:
     'in.R'
     'pow.R'
     'table.R'
+    'union.R'
+    'self_match.R'
+    'sort_unique.R'

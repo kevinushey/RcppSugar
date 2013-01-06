@@ -1,17 +1,15 @@
-\name{table}
-\alias{table}
-\title{Rcpp Sugar -- table}
+\name{self_match}
+\alias{self_match}
+\title{Rcpp Sugar -- self_match}
 \usage{
-  table(x, ...)
+  self_match(x)
 }
 \arguments{
   \item{x}{a vector of storage mode: character, double,
   integer}
-
-  \item{...}{additional arguments used for compatibility}
 }
 \description{
   This function implements the Rcpp sugar function
-  \code{table}.
+  \code{self_match}.
 }
 

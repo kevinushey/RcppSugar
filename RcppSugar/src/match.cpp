@@ -1,29 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-RcppExport SEXP RcppSugar_match_numeric( SEXP a_, SEXP b_ ) {
-  
-  NumericVector a = as<NumericVector>(a_);
-  NumericVector b = as<NumericVector>(b_);
-  
-  return wrap( match( a, b ) );
-  
+RcppExport SEXP RcppSugar_match_character_character( SEXP a_, SEXP b_) {
+	return wrap( match( as< CharacterVector >(a_), as< CharacterVector >(b_) ) );
 }
 
-RcppExport SEXP RcppSugar_match_integer( SEXP a_, SEXP b_ ) {
-  
-  IntegerVector a = as<IntegerVector>(a_);
-  IntegerVector b = as<IntegerVector>(b_);
-  
-  return wrap( match( a, b ) );
-  
+RcppExport SEXP RcppSugar_match_double_double( SEXP a_, SEXP b_) {
+	return wrap( match( as< NumericVector >(a_), as< NumericVector >(b_) ) );
 }
 
-RcppExport SEXP RcppSugar_match_character( SEXP a_, SEXP b_ ) {
-  
-  CharacterVector a = as<CharacterVector>(a_);
-  CharacterVector b = as<CharacterVector>(b_);
-  
-  return wrap( match( a, b ) );
-  
+RcppExport SEXP RcppSugar_match_integer_integer( SEXP a_, SEXP b_) {
+	return wrap( match( as< IntegerVector >(a_), as< IntegerVector >(b_) ) );
 }
+

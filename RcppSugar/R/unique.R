@@ -15,10 +15,10 @@
 #' stopifnot( all.equal( sort(unique(x)), sort(base::unique(x)) ) )
 unique <- function(x) {
   
-  class <- "["( class(x), length(class(x)) )
+  type <- typeof(x)
   
-  switch( class,
-          numeric=.Call( "RcppSugar_unique_numeric", x, PACKAGE="RcppSugar" ),
+  switch( type,
+          double=.Call( "RcppSugar_unique_numeric", x, PACKAGE="RcppSugar" ),
           integer=.Call( "RcppSugar_unique_integer", x, PACKAGE="RcppSugar" ),
           character=.Call( "RcppSugar_unique_character", x, PACKAGE="RcppSugar" ),
           base::unique( x )

@@ -31,19 +31,11 @@
 #' stopifnot( all.equal( x %in% y, base::"%in%"(x, y) ) )
 "%in%"  <- function(x, y) {
   
-  classes <- c( class(x), class(y) )
+  type <- typeof(x)
   
-  if( any(classes == "character" ) ) {
-    class <- "character"
-  } else if( any(classes == "numeric" ) ) {
-    class <- "numeric"
-  } else {
-    class <- "integer"
-  }
-  
-  switch( class,
+  switch( type,
           numeric=.Call( "RcppSugar_in_numeric", x, y, PACKAGE="RcppSugar" ),
-          integer=.Call( "RcppSugar_in_integer", x, y, PACKAGE="RcppSugar" ),
+          double=.Call( "RcppSugar_in_integer", x, y, PACKAGE="RcppSugar" ),
           character=.Call( "RcppSugar_in_character", x, y, PACKAGE="RcppSugar" ),
           base::"%in%"(x, y)
   )

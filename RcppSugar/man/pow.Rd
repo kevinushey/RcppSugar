@@ -16,7 +16,7 @@
 }
 \examples{
 library( microbenchmark )
-x <- rnorm(1E8)
+x <- rnorm(1E5)
 n <- 3L
 microbenchmark( times=2,
   pow(x, n),
@@ -29,7 +29,7 @@ microbenchmark( times=2,
   x^n
   )
 
-x <- sample( 1:100L, size=1E6, replace=TRUE )
+x <- sample( 1:100L, size=1E5, replace=TRUE )
 n <- 3L
 microbenchmark( times=2,
   pow(x, n),
@@ -37,7 +37,5 @@ microbenchmark( times=2,
   )
 
 stopifnot( all.equal( pow(x, n), x^n ) )
-## the Rcpp solution can actually be a bit faster with very large
-## numeric vectors; however, it's much slower for small vectors.
 }
 

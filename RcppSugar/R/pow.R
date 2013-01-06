@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' library( microbenchmark )
-#' x <- rnorm(1E8)
+#' x <- rnorm(1E5)
 #' n <- 3L
 #' microbenchmark( times=2,
 #'   pow(x, n),
@@ -20,7 +20,7 @@
 #'   x^n
 #'   )
 #'   
-#' x <- sample( 1:100L, size=1E6, replace=TRUE )
+#' x <- sample( 1:100L, size=1E5, replace=TRUE )
 #' n <- 3L
 #' microbenchmark( times=2,
 #'   pow(x, n),
@@ -28,16 +28,14 @@
 #'   )
 #'   
 #' stopifnot( all.equal( pow(x, n), x^n ) )
-#' ## the Rcpp solution can actually be a bit faster with very large
-#' ## numeric vectors; however, it's much slower for small vectors.
 pow <- function(x, n) {
   
-  modes <- paste( mode(x), mode(n), sep="_" )
+  types <- paste( typeof(x), typeof(n), sep="_" )
   
   switch( modes,
-          numeric_numeric = .Call( "RcppSugar_pow_numeric_numeric", x, n, PACKAGE="RcppSugar" ),
-          numeric_integer = .Call( "RcppSugar_pow_numeric_integer", x, n, PACKAGE="RcppSugar" ),
-          integer_numeric = .Call( "RcppSugar_pow_integer_numeric", x, n, PACKAGE="RcppSugar" ),
+          double_double = .Call( "RcppSugar_pow_numeric_numeric", x, n, PACKAGE="RcppSugar" ),
+          double_integer = .Call( "RcppSugar_pow_numeric_integer", x, n, PACKAGE="RcppSugar" ),
+          integer_double = .Call( "RcppSugar_pow_integer_numeric", x, n, PACKAGE="RcppSugar" ),
           integer_integer = .Call( "RcppSugar_pow_integer_integer", x, n, PACKAGE="RcppSugar" ),
           x^n
   )
