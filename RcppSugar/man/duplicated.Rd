@@ -1,8 +1,8 @@
-\name{unique}
-\alias{unique}
-\title{Rcpp Sugar -- unique}
+\name{duplicated}
+\alias{duplicated}
+\title{Rcpp Sugar -- duplicated}
 \usage{
-  unique(x, ...)
+  duplicated(x, ...)
 }
 \arguments{
   \item{x}{a vector of storage mode: double, integer,
@@ -12,6 +12,6 @@
 }
 \description{
   This function implements the Rcpp sugar function
-  \code{unique}.
+  \code{duplicated}.
 }
 

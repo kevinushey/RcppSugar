@@ -48,6 +48,9 @@ sugarize <- function(
     
   }
   
+  ## remove dots
+  all_types <- gsub( "\\.", "_", all_types )
+  
   sugar_functions <- paste( sep="_",
                             "RcppSugar",
                             sugar_function,

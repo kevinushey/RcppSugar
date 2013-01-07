@@ -29,3 +29,7 @@ Collate:
     'union.R'
     'self_match.R'
     'sort_unique.R'
+    'exp.R'
+    'ceil.R'
+    'floor.R'
+    'duplicated.R'

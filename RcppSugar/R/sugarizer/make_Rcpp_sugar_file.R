@@ -39,9 +39,10 @@ make_Rcpp_sugar_file <- function( sugar_function,
   args_vector <- paste( "SEXP", letters_[1:num_args] )
   args <- paste( args_vector, collapse=", " )
   
-  Rcpp_vector_types <- Kmisc::kReplace( possible_types,
-                                        c("character", "double", "integer"),
-                                        c("CharacterVector", "NumericVector", "IntegerVector")
+  Rcpp_vector_types <- Kmisc::kReplace( 
+    possible_types,
+    c("character", "double", "numeric", "integer", "data.frame"),
+    c("CharacterVector", "NumericVector", "NumericVector", "IntegerVector", "DataFrame")
   )
   
   if( same_types ) {
