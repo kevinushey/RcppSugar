@@ -2,7 +2,7 @@
 \alias{sugar_collapse}
 \title{Rcpp Sugar -- collapse}
 \usage{
-  sugar_collapse(x)
+  sugar_collapse(x, collapse = NULL)
 }
 \arguments{
   \item{x}{a vector of storage mode: character}
