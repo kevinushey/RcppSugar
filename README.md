@@ -16,10 +16,5 @@ you have [Rtools](http://cran.r-project.org/bin/windows/Rtools/) installed and i
     library("devtools")
     install_github("RcppSugar", "cdrv", subdir="RcppSugar")
     
-Although the functions exported will mask the same functions
-available in `base`, the functions will fall back to the base-R
-implementation if the class of the object does not match an
-available `RcppSugar` implementation.
-
 This package is currently in a (very) beta version -- please let me know if
 you encounter any strange bugs.
