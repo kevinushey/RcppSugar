@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{exp}.
 #' @param x a vector of storage mode: double, integer
 #' @export
-exp <- function(x) {
+sugar_exp <- function(x) {
 
 	types <- typeof(x)
 	

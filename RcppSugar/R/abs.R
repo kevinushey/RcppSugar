@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{abs}.
 #' @param x a vector of storage mode: double, integer
 #' @export
-abs <- function(x) {
+sugar_abs <- function(x) {
 
 	types <- typeof(x)
 	

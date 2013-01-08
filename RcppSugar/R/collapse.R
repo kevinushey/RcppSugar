@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{collapse}.
 #' @param x a vector of storage mode: character
 #' @export
-collapse <- function(x) {
+sugar_collapse <- function(x) {
 
 	types <- typeof(x)
 	

@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{self_match}.
 #' @param x a vector of storage mode: character, double, integer
 #' @export
-self_match <- function(x) {
+sugar_self_match <- function(x) {
 
 	types <- typeof(x)
 	

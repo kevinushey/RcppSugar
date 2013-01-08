@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{ceil}.
 #' @param x a vector of storage mode: double, integer
 #' @export
-ceil <- function(x) {
+sugar_ceil <- function(x) {
 
 	types <- typeof(x)
 	

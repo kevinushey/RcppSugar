@@ -29,8 +29,8 @@ sugarize <- function(
   ask=TRUE
   ) {
   
-  source("./R/sugarizer/make_R_source_file.R")
-  source("./R/sugarizer/make_Rcpp_sugar_file.R")
+  source("./sugarizer/make_R_source_file.R")
+  source("./sugarizer/make_Rcpp_sugar_file.R")
   
   R_arg_names=c("x", "y", "z", letters[1:23]) ## intentionally longer than necessary
   

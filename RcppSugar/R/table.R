@@ -4,7 +4,7 @@
 #' @param x a vector of storage mode: character, double, integer
 #' @param ... additional arguments used for compatibility
 #' @export
-table <- function(x, ... ) {
+sugar_table <- function(x, ... ) {
 
 	if( !is.null( match.call(expand.dots=FALSE)$`...` ) ) {
 		return( base::table( x, ... ) )

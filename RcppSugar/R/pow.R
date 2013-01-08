@@ -28,7 +28,7 @@
 #'   )
 #'   
 #' stopifnot( all.equal( pow(x, n), x^n ) )
-pow <- function(x, n) {
+sugar_pow <- function(x, n) {
   
   types <- paste( typeof(x), typeof(n), sep="_" )
   

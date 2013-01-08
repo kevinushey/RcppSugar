@@ -33,3 +33,5 @@ Collate:
     'ceil.R'
     'floor.R'
     'duplicated.R'
+    'truncate.R'
+    'attach_sugar.R'

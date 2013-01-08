@@ -1,5 +1,5 @@
-\name{\%in\%}
-\alias{\%in\%}
+\name{sugar_\%in\%}
+\alias{sugar_\%in\%}
 \title{Rcpp Sugar -- in}
 \usage{
   x \%in\% y

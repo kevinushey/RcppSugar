@@ -29,7 +29,7 @@
 #'   )
 #'   
 #' stopifnot( all.equal( x %in% y, base::"%in%"(x, y) ) )
-"%in%"  <- function(x, y) {
+"sugar_%in%"  <- function(x, y) {
   
   type <- typeof(x)
   

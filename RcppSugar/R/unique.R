@@ -4,7 +4,7 @@
 #' @param x a vector of storage mode: double, integer, character
 #' @param ... additional arguments used for compatibility
 #' @export
-unique <- function(x, ... ) {
+sugar_unique <- function(x, ... ) {
 
 	if( !is.null( match.call(expand.dots=FALSE)$`...` ) ) {
 		return( base::unique(x, ...) )

@@ -5,7 +5,7 @@
 #' @param y a vector of storage mode: character, double, integer
 #' @param ... additional arguments used for compatibility
 #' @export
-match <- function(x, y, ... ) {
+sugar_match <- function(x, y, ... ) {
 
 	if( !is.null( match.call(expand.dots=FALSE)$`...` ) ) {
 		return( base::match(x, y, ...) )

@@ -1,4 +1,4 @@
-source( "./R/sugarizer/sugarizer.R" )
+source( "./sugarizer/sugarizer.R" )
 
 sugarize(
   sugar_function="collapse",

@@ -125,6 +125,7 @@ make_R_source_file <- function(sugar_function,
   ########################
   
   initial_statement <- paste( sep="",
+                              "sugar_",
                               sugar_function,
                               " <- function(",
                               params,

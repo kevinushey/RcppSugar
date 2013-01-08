@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{floor}.
 #' @param x a vector of storage mode: double, integer
 #' @export
-floor <- function(x) {
+sugar_floor <- function(x) {
 
 	types <- typeof(x)
 	

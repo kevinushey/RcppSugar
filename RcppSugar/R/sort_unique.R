@@ -3,7 +3,7 @@
 #' This function implements the Rcpp sugar function \code{sort_unique}.
 #' @param x a vector of storage mode: character, double, integer
 #' @export
-sort_unique <- function(x) {
+sugar_sort_unique <- function(x) {
 
 	types <- typeof(x)
 	
