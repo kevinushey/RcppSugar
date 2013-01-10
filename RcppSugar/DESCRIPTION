@@ -35,3 +35,5 @@ Collate:
     'duplicated.R'
     'truncate.R'
     'attach_sugar.R'
+    'gcd.R'
+    'lcm.R'

@@ -1,6 +1,8 @@
 export("sugar_%in%")
 export(attach_sugar)
 export(detach_sugar)
+export(gcd)
+export(lcm)
 export(sugar_abs)
 export(sugar_ceil)
 export(sugar_collapse)
