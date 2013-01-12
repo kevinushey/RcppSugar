@@ -1,4 +1,7 @@
+#include <R.h>
+#include <Rdefines.h>
 #include <Rcpp.h>
+
 using namespace Rcpp;
 
 RcppExport SEXP RcppSugar_abs_double( SEXP a_) {

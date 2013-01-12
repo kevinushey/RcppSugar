@@ -1,7 +1,6 @@
 #include <Rcpp.h>
 #include <boost/algorithm/string/replace.hpp>
 
-using namespace std;
 using namespace Rcpp;
 
 RcppExport SEXP str_replace( SEXP x_, SEXP from_, SEXP to_ ) {
