@@ -1,8 +1,8 @@
 Package: RcppSugar
 Type: Package
 Title: An implementation of Rcpp 'sugar'.
-Version: 0.1.0
-Date: 2013-01-04
+Version: 0.1.1
+Date: 2013-03-13
 Author: Kevin Ushey
 Maintainer: Kevin Ushey <kevinushey@gmail.com>
 Description: This package wraps and exports some of Rcpp's sugar functions
@@ -37,3 +37,5 @@ Collate:
     'attach_sugar.R'
     'gcd.R'
     'lcm.R'
+    'str_replace.R'
+    'str_split.R'

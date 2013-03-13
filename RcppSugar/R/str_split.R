@@ -11,5 +11,5 @@
 #' @param fixed logical. if \code{TRUE}, we split by regular expression;
 #' otherwise, we just directly match \code{split}.
 str_split <- function(x, split, fixed=FALSE) {
-  .Call( "str_split", x, split, fixed, PACKAGE="Kmisc" )
+  .Call( "str_split", x, split, fixed, PACKAGE="RcppSugar" )
 }

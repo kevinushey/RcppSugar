@@ -10,5 +10,5 @@
 #' @param from a string
 #' @param to a string
 str_replace <- function(x, from, to) {
-  .Call( "str_replace", x, from, to, PACKAGE="Kmisc" )
+  .Call( "str_replace", x, from, to, PACKAGE="RcppSugar" )
 }

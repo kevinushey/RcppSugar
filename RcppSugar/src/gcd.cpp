@@ -1,5 +1,3 @@
-#include <R.h>
-#include <Rdefines.h>
 #include <Rcpp.h>
 #include <boost/math/common_factor.hpp>
 using namespace Rcpp;
